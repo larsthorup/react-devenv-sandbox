@@ -35,8 +35,11 @@
     "trailingComma": "es5"
   },
   "scripts": {
+    "build": "node script/pre-rollup && npm run rollup",
+    "rollup": "rollup --config rollup.config.js",
     "start": "http-server . -o",
-    "test": "npm run tsc",
+    "start:build": "npm run build && http-server build -o",
+    "test": "npm run tsc && npm run build",
     "tsc": "tsc --noEmit"
   }
 }

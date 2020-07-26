@@ -8,6 +8,11 @@ npm test
 npm start
 ```
 
+```shell
+npm run build
+npm run start:build
+```
+
 ## Metrics
 
 Local install-size: TBD

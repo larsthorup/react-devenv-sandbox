@@ -24,6 +24,9 @@
     "http-server": "^0.12.3",
     "mocha": "^8.0.1",
     "nyc": "^15.1.0",
+    "postcss": "^7.0.32",
+    "postcss-cli": "^7.1.1",
+    "postcss-import": "^12.0.1",
     "prettier": "^2.0.5",
     "puppeteer-core": "^5.2.1",
     "rollup": "^2.23.0",
@@ -35,7 +38,8 @@
     "trailingComma": "es5"
   },
   "scripts": {
-    "build": "node script/pre-rollup && npm run rollup",
+    "build": "node script/pre-build && npm run rollup && npm run postcss",
+    "postcss": "postcss --use postcss-import --output build/style/index.css style/index.css",
     "rollup": "rollup --config rollup.config.js",
     "start": "http-server . -o",
     "start:build": "npm run build && http-server build -o",

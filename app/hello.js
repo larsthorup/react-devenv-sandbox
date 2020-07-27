@@ -1,6 +1,6 @@
 import '../node_modules/react/umd/react.development.js';
 
-const { React, ReactDOM } = window;
+const { React } = window;
 
 const { createElement: h, useState } = React;
 

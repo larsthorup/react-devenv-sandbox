@@ -1,6 +1,7 @@
 {
   "name": "react-devenv-sandbox",
   "version": "0.1.0",
+  "type": "module",
   "author": "Lars Thorup <lars@zealake.com> (https://www.zealake.com/)",
   "license": "MIT",
   "dependencies": {
@@ -15,7 +16,9 @@
   },
   "devDependencies": {
     "@rollup/plugin-alias": "^3.1.1",
+    "@types/chai": "^4.2.12",
     "@types/history": "^4.7.7",
+    "@types/mocha": "^8.0.1",
     "@types/node": "^14.0.26",
     "@types/react": "^16.9.43",
     "@types/react-dom": "^16.9.8",
@@ -37,13 +40,14 @@
     "typescript": "^3.9.7"
   },
   "scripts": {
-    "build": "node script/pre-build && npm run rollup && npm run postcss",
+    "build": "node script/pre-build.cjs && npm run rollup && npm run postcss",
     "eslint": "eslint --cache .",
+    "mocha": "mocha",
     "postcss": "postcss --use postcss-import --output build/style/index.css style/index.css",
     "rollup": "rollup --config rollup.config.js",
     "start": "http-server . -o",
     "start:build": "npm run build && http-server build -o",
-    "test": "npm run eslint && npm run tsc && npm run build",
+    "test": "npm run eslint && npm run tsc && npm run mocha && npm run build",
     "tsc": "tsc --noEmit"
   },
   "eslintConfig": {

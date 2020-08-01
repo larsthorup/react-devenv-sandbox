@@ -10,6 +10,7 @@
       "files": ["**/*.test.js"],
       "env": {
         "browser": false,
+        "node": true,
         "mocha": true
       }
     }

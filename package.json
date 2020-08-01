@@ -18,14 +18,18 @@
     "@rollup/plugin-alias": "^3.1.1",
     "@types/chai": "^4.2.12",
     "@types/history": "^4.7.7",
+    "@types/http-server": "^0.10.0",
+    "@types/http-terminator": "^2.0.1",
     "@types/mocha": "^8.0.1",
     "@types/node": "^14.0.26",
+    "@types/puppeteer-core": "^2.0.0",
     "@types/react": "^16.9.43",
     "@types/react-dom": "^16.9.8",
     "@types/react-redux": "^7.1.9",
     "chai": "^4.2.0",
     "eslint": "^7.5.0",
     "http-server": "^0.12.3",
+    "http-terminator": "^2.0.3",
     "mocha": "^8.0.1",
     "nyc": "^15.1.0",
     "postcss": "^7.0.32",
@@ -40,7 +44,7 @@
     "typescript": "^3.9.7"
   },
   "scripts": {
-    "build": "node script/pre-build.cjs && npm run rollup && npm run postcss",
+    "build": "node dev/pre-build.cjs && npm run rollup && npm run postcss",
     "eslint": "eslint --cache .",
     "mocha": "mocha",
     "postcss": "postcss --use postcss-import --output build/app/index.css app/index.css",
@@ -59,7 +63,7 @@
       "build"
     ],
     "parserOptions": {
-      "ecmaVersion": 6,
+      "ecmaVersion": 10,
       "sourceType": "module"
     },
     "root": true

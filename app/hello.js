@@ -1,8 +1,4 @@
-import '../node_modules/react/umd/react.development.js';
-
-const { React } = window;
-
-const { createElement: h, useState } = React;
+import { createElement as h, useState } from './lib/react.js';
 
 /** @type {React.FC<{name: string}>} */
 const Hello = ({ name }) => {

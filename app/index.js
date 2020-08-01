@@ -1,9 +1,5 @@
-import '../node_modules/react/umd/react.development.js';
-import '../node_modules/react-dom/umd/react-dom.development.js';
+import { createElement as h } from './lib/react.js';
+import * as ReactDOM from './lib/react-dom.js';
 import App from './app.js';
-
-const { React, ReactDOM } = window;
-
-const { createElement: h } = React;
 
 ReactDOM.render(h(App), document.getElementById('root'));

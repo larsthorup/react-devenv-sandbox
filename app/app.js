@@ -1,9 +1,5 @@
-import '../node_modules/react/umd/react.development.js';
+import { createElement as h } from './lib/react.js';
 import Hello from './hello.js';
-
-const { React } = window;
-
-const { createElement: h } = React;
 
 const App = () => h(Hello, { name: 'lib/react' });
 

@@ -6,6 +6,4 @@ const { React, ReactDOM } = window;
 
 const { createElement: h } = React;
 
-console.log(typeof React.createElement, React.createElement);
-
 ReactDOM.render(h(App), document.getElementById('root'));

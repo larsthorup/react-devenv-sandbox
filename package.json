@@ -43,7 +43,7 @@
     "build": "node script/pre-build.cjs && npm run rollup && npm run postcss",
     "eslint": "eslint --cache .",
     "mocha": "mocha",
-    "postcss": "postcss --use postcss-import --output build/style/index.css style/index.css",
+    "postcss": "postcss --use postcss-import --output build/app/index.css app/index.css",
     "rollup": "rollup --config rollup.config.js",
     "start": "http-server . -o",
     "start:build": "npm run build && http-server build -o",

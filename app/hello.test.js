@@ -1,5 +1,3 @@
-// TODO: chai
-
 import * as assert from 'assert';
 
 describe('hello', function () {

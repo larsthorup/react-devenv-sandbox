@@ -6,7 +6,6 @@ const buildDir = path.join(rootDir, 'build');
 
 fs.rmdirSync(buildDir, { recursive: true });
 fs.mkdirSync(buildDir);
-fs.mkdirSync(path.join(buildDir, 'style'));
 for (const filename of ['favicon.ico', 'index.html']) {
   const src = path.join(rootDir, filename);
   const dest = path.join(buildDir, filename);

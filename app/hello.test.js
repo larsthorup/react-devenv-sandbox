@@ -1,4 +1,3 @@
-/* eslint-env browser, mocha */
 import { expect } from './lib/chai.js';
 import { createElement as h } from './lib/react.js';
 import * as ReactDOM from './lib/react-dom.js';

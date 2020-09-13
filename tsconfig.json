@@ -6,6 +6,6 @@
     "noEmit": true,
     "strict": true
   },
-  "exclude": ["build", "node_modules"],
-  "include": ["**/*.js", "**/*.ts"]
+  "exclude": ["build", "node_modules", "dev/**/*.js"],
+  "include": ["app/**/*.js"]
 }

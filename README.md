@@ -31,6 +31,7 @@ npm run start:build
 
 ### Bare
 
+- Download deps from unpkg.com
 - Chrome
 - Extension: Web Server for Chrome
 

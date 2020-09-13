@@ -4,6 +4,11 @@ Resource efficient front-end development environment.
 
 Independently opt-in tools to help developers collaborate at writing robust code quickly in a resource constrained environment (e.g. low-end computer, intermittent power, intermittent network).
 
+Using Web Server for Chrome extension:
+
+http://127.0.0.1:8887/index.html
+http://127.0.0.1:8887/dev/mocha-runner.html
+
 ```shell
 npm install
 npm test
@@ -34,6 +39,11 @@ npm run start:build
 - Mocha + Chai
 - Chrome Coverage
 - Optional: testing-library
+
+### Dependency management
+
+- Node.js
+- NPM
 
 ### Bundle
 

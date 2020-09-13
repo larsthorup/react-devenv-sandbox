@@ -35,7 +35,6 @@
     "postcss": "^7.0.32",
     "postcss-cli": "^7.1.1",
     "postcss-import": "^12.0.1",
-    "pptr-testing-library": "^0.6.1",
     "prettier": "^2.0.5",
     "puppeteer-core": "^5.2.1",
     "puppeteer-to-istanbul": "^1.4.0",
@@ -46,14 +45,14 @@
   "scripts": {
     "build": "node dev/asset-bundle.cjs && npm run rollup && npm run postcss",
     "eslint": "eslint --cache .",
-    "mocha": "mocha",
     "postcss": "postcss --use postcss-import --output build/app/index.css app/index.css",
     "prettier": "prettier --write --ignore-path .gitignore .",
+    "puppeteer": "",
     "rollup": "rollup --config rollup.config.js",
     "start": "http-server . -o",
     "start:build": "npm run build && http-server build -o",
-    "test": "npm run prettier && npm run eslint && npm run tsc && npm run mocha && npm run build",
-    "tsc": "tsc --noEmit"
+    "test": "npm run prettier && npm run eslint && npm run tsc && npm run puppeteer && npm run build",
+    "tsc": "tsc"
   },
   "eslintConfig": {
     "env": {
@@ -64,7 +63,7 @@
       "build"
     ],
     "parserOptions": {
-      "ecmaVersion": 10,
+      "ecmaVersion": 2020,
       "sourceType": "module"
     },
     "root": true

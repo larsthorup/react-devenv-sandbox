@@ -3,6 +3,7 @@
     "allowJs": true,
     "checkJs": true,
     "esModuleInterop": true,
+    "noEmit": true,
     "strict": true
   },
   "exclude": ["build", "node_modules"],

@@ -40,9 +40,11 @@ const runningMochaInPuppeteer = async () => {
   const browser = await puppeteer.launch(options);
   const pages = await browser.pages();
   const page = pages.pop();
+  let isPageError = false;
   page.on('console', mochaConsoleHandler);
   page.on('pageerror', ({ message }) => {
     console.error(message);
+    isPageError = true;
   });
   page.on('response', (/*response*/) => {
     // console.log(`${response.status()} ${response.url()}`);
@@ -64,6 +66,7 @@ const runningMochaInPuppeteer = async () => {
     page.coverage.stopCSSCoverage(),
   ]);
   await browser.close();
+  if (isPageError) throw new Error('See page errors above');
   return {
     mochaResult,
     jsCoverage,

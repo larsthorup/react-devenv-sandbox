@@ -11,6 +11,6 @@ const windowWithTestingLibraryReact = /** @type { {TestingLibraryReact: TestingL
 
 const { TestingLibraryReact } = windowWithTestingLibraryReact;
 
-const { fireEvent, render, screen } = TestingLibraryReact;
+const { cleanup, fireEvent, render, screen } = TestingLibraryReact;
 
-export { fireEvent, render, screen };
+export { cleanup, fireEvent, render, screen };

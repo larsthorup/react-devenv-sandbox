@@ -49,6 +49,7 @@
     "build": "node dev/asset-bundle.cjs && npm run rollup && npm run postcss",
     "coveralls": "coveralls < coverage/lcov.info",
     "eslint": "eslint --cache .",
+    "generate": "node app/generated/generate.mjs",
     "nyc-report": "nyc report --reporter=html --reporter=text-summary --reporter=lcov",
     "postcss": "postcss --use postcss-import --output build/app/index.css app/index.css",
     "prettier": "prettier --write --ignore-path .gitignore .",
@@ -56,7 +57,7 @@
     "rollup": "rollup --config rollup.config.js",
     "start": "http-server . -o",
     "start:build": "npm run build && http-server build -o",
-    "test": "npm run prettier && npm run eslint && npm run tsc && npm run puppeteer && npm run nyc-report && npm run build",
+    "test": "npm run generate && npm run prettier && npm run eslint && npm run tsc && npm run puppeteer && npm run nyc-report && npm run build",
     "travis": "npm test && npm run coveralls",
     "tsc": "tsc"
   },

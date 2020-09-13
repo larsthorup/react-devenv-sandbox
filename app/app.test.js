@@ -1,10 +1,16 @@
 import { expect } from './lib/chai.js';
 import { createElement as h } from './lib/react.js';
-import { fireEvent, render, screen } from './lib/react-testing-library.js';
+import {
+  cleanup,
+  fireEvent,
+  render,
+  screen,
+} from './lib/react-testing-library.js';
 
 import App from './app.js';
 
 describe('app', function () {
+  afterEach(cleanup);
   it('works', async function () {
     // when: rendered
     render(h(App));

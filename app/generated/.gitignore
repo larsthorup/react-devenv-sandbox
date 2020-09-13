@@ -1,0 +1,5 @@
+*
+!.gitignore
+!ComponentXXX.js
+!ComponentXXX.test.js
+!generate.mjs

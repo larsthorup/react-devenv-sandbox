@@ -7,7 +7,8 @@ import '../../node_modules/@testing-library/react/dist/@testing-library/react.pu
 const windowUnknown = /** @type {any} */ window;
 
 /** @type { { TestingLibraryReact: TestingLibraryReact } } */
-const windowWithTestingLibraryReact = /** @type { {TestingLibraryReact: TestingLibraryReact} } */ windowUnknown;
+const windowWithTestingLibraryReact =
+  /** @type { {TestingLibraryReact: TestingLibraryReact} } */ windowUnknown;
 
 const { TestingLibraryReact } = windowWithTestingLibraryReact;
 

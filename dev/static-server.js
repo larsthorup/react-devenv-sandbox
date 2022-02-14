@@ -20,8 +20,9 @@ export const launch = async (port, root) => {
  * @param {Server} server
  */
 export const terminate = async (server) => {
-  const serverConfig = /** @type {import('http-terminator').HttpTerminatorConfig} */ (
-    /** @type {unknown} */ (server)
-  );
+  const serverConfig =
+    /** @type {import('http-terminator').HttpTerminatorConfig} */ (
+      /** @type {unknown} */ (server)
+    );
   await httpTerminator.createHttpTerminator(serverConfig).terminate();
 };

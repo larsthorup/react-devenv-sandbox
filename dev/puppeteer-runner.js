@@ -1,16 +1,16 @@
-import * as fs from 'fs';
-import * as util from 'util';
 import ChromeLauncher from 'chrome-launcher';
+import * as fs from 'fs';
 import httpServer from 'http-server';
 import puppeteer from 'puppeteer-core';
 import puppeteerToIstanbul from 'puppeteer-to-istanbul';
+import * as util from 'util';
 import { getMochaResult, initMocha } from './browser/mocha-bridge.js';
 
 // Note: inspired by https://github.com/direct-adv-interfaces/mocha-headless-chrome/
 
 const root = '.';
 const port = 8081;
-const url = `http://127.0.0.1:${port}/dev/mocha-runner.html`;
+const url = `http://localhost:${port}/dev/mocha-runner.html`;
 const reporter = 'dot';
 const timeout = 60000;
 
@@ -104,7 +104,7 @@ const writingResult = (result) => {
 };
 
 const mochaConsoleHandler = (msg) => {
-  const args = msg._args;
+  const args = msg.args();
   Promise.all(args.map((a) => a.jsonValue().catch(() => ''))).then((args) => {
     // process stdout stub
     let isStdout = args[0] === 'stdout:';

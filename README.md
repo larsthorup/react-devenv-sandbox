@@ -39,6 +39,7 @@ npm run start:build
 
 - Mocha + Chai
 - Chrome Coverage
+- TODO: React Test Renderer
 - Optional: testing-library
 
 ### Dependency management
